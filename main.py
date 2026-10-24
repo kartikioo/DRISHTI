@@ -14,6 +14,8 @@ import socket
 import signal
 import subprocess
 import webbrowser
+import threading
+import re
 from pathlib import Path
 
 # ANSI Color Codes
@@ -23,6 +25,7 @@ YELLOW = "\033[93m"
 RED = "\033[91m"
 BOLD = "\033[1m"
 DIM = "\033[2m"
+MAGENTA = "\033[95m"
 RESET = "\033[0m"
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -42,6 +45,8 @@ if extra_paths:
     os.environ["PATH"] = ":".join(extra_paths) + ":" + current_path
 
 processes = []
+public_tunnel_url = ""
+tunnel_lock = threading.Lock()
 
 
 def get_local_ip() -> str:
@@ -64,6 +69,70 @@ def is_port_in_use(port: int) -> bool:
         return s.connect_ex(("127.0.0.1", port)) == 0
 
 
+def copy_to_clipboard(text: str) -> bool:
+    """Copy text to macOS clipboard using pbcopy."""
+    try:
+        proc = subprocess.Popen(["pbcopy"], stdin=subprocess.PIPE)
+        proc.communicate(input=text.encode("utf-8"))
+        return proc.returncode == 0
+    except Exception:
+        return False
+
+
+def start_public_tunnel():
+    """Start SSH reverse tunnel via localhost.run to expose the app to the entire internet."""
+    global public_tunnel_url
+
+    print(f" {YELLOW}⏳ Generating Public Shareable Internet Link...{RESET}")
+    cmd = [
+        "ssh",
+        "-R", "80:localhost:5173",
+        "-o", "StrictHostKeyChecking=no",
+        "-o", "ServerAliveInterval=30",
+        "-o", "ServerAliveCountMax=3",
+        "-o", "ExitOnForwardFailure=yes",
+        "nokey@localhost.run"
+    ]
+
+    try:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1
+        )
+        processes.append(proc)
+
+        def _reader():
+            global public_tunnel_url
+            url_pattern = re.compile(r"https://[a-zA-Z0-9.-]+\.lhr\.life")
+            for line in iter(proc.stdout.readline, ""):
+                if not line:
+                    break
+                match = url_pattern.search(line)
+                if match:
+                    with tunnel_lock:
+                        public_tunnel_url = match.group(0)
+                    copy_to_clipboard(public_tunnel_url)
+                    sep = "-" * 66
+                    print(f"\n{GREEN}{BOLD}{sep}{RESET}")
+                    print(f" {GREEN}{BOLD}🌍 PUBLIC INTERNET ACCESS READY! (ACCESSIBLE TO ANYONE){RESET}")
+                    print(f" 🔗 {YELLOW}{BOLD}{public_tunnel_url}{RESET}")
+                    print(f" 📋 {GREEN}✓ Copied public link to your clipboard! Share this link with anyone.{RESET}")
+                    print(f"{GREEN}{BOLD}{sep}{RESET}\n")
+                    break
+
+        t = threading.Thread(target=_reader, daemon=True)
+        t.start()
+        # Allow up to 4.5 seconds for tunnel handshake
+        t.join(timeout=4.5)
+        return proc
+    except Exception as e:
+        print(f" {RED}Tunnel start error: {e}{RESET}")
+        return None
+
+
 def print_banner(local_ip: str):
     """Print the high-visibility VS Code Host status banner."""
     sep = "=" * 66
@@ -74,6 +143,14 @@ def print_banner(local_ip: str):
     print(f" {BOLD}🌐 ACTIVE HOST LINKS:{RESET}")
     print(f"   🏠 {GREEN}{BOLD}Localhost URL:{RESET}       {CYAN}http://localhost:5173/{RESET}")
     print(f"   📱 {GREEN}{BOLD}Network (LAN/Wi-Fi):{RESET} {CYAN}http://{local_ip}:5173/{RESET}")
+
+    with tunnel_lock:
+        tunnel_url = public_tunnel_url
+    if tunnel_url:
+        print(f"   🌍 {GREEN}{BOLD}Public Link (Global):{RESET}{YELLOW}{BOLD} {tunnel_url}{RESET} {GREEN}(Share with anyone!){RESET}")
+    else:
+        print(f"   🌍 {GREEN}{BOLD}Public Link (Global):{RESET}{DIM} Generating... (press [t] to view){RESET}")
+
     print(f"   ⚙️  {GREEN}{BOLD}Backend REST API:{RESET}   {CYAN}http://localhost:5001/{RESET}")
     print(f"   🩺 {GREEN}{BOLD}API Health Check:{RESET}   {CYAN}http://localhost:5001/api/health{RESET}\n")
 
@@ -83,8 +160,9 @@ def print_banner(local_ip: str):
     print(f"     and click {GREEN}'Publish to GitHub'{RESET} or {GREEN}'Sync Changes'{RESET}.\n")
 
     print(f" {BOLD}⚡ COMMAND CONTROLS:{RESET}")
-    print(f"   • {YELLOW}[o]{RESET} Open in Web Browser   • {YELLOW}[g]{RESET} Connect / Push to GitHub")
-    print(f"   • {YELLOW}[s]{RESET} Show Host Links       • {YELLOW}[q]{RESET} Stop & Exit")
+    print(f"   • {YELLOW}[o]{RESET} Open in Web Browser   • {YELLOW}[t]{RESET} Start / Show Public Link")
+    print(f"   • {YELLOW}[c]{RESET} Copy Public Link      • {YELLOW}[g]{RESET} Connect / Push to GitHub")
+    print(f"   • {YELLOW}[s]{RESET} Show All Links        • {YELLOW}[q]{RESET} Stop & Exit")
     print(f"{CYAN}{BOLD}{sep}{RESET}\n")
 
 
@@ -210,11 +288,15 @@ def main():
 
     start_backend()
     start_frontend()
+    start_public_tunnel()
 
     print_banner(local_ip)
 
+    with tunnel_lock:
+        target_url = public_tunnel_url or "http://localhost:5173/"
+
     try:
-        webbrowser.open("http://localhost:5173/")
+        webbrowser.open(target_url)
     except Exception:
         pass
 
@@ -224,14 +306,37 @@ def main():
             if cmd == "q" or cmd == "exit":
                 break
             elif cmd == "o" or cmd == "open":
-                webbrowser.open("http://localhost:5173/")
-                print(f" {GREEN}✓{RESET} Opened http://localhost:5173/ in browser.")
+                with tunnel_lock:
+                    url_to_open = public_tunnel_url or "http://localhost:5173/"
+                webbrowser.open(url_to_open)
+                print(f" {GREEN}✓{RESET} Opened {url_to_open} in browser.")
+            elif cmd == "t" or cmd == "tunnel" or cmd == "public":
+                with tunnel_lock:
+                    curr = public_tunnel_url
+                if curr:
+                    copy_to_clipboard(curr)
+                    print(f"\n 🌍 {GREEN}{BOLD}Public Share Link:{RESET} {YELLOW}{BOLD}{curr}{RESET}")
+                    print(f" 📋 {GREEN}✓ Copied to clipboard! Share this link with anyone anywhere.{RESET}\n")
+                else:
+                    print(f" {YELLOW}Generating public link...{RESET}")
+                    start_public_tunnel()
+            elif cmd == "c" or cmd == "copy":
+                with tunnel_lock:
+                    curr = public_tunnel_url
+                if curr:
+                    copy_to_clipboard(curr)
+                    print(f" 📋 {GREEN}✓ Copied '{curr}' to clipboard!{RESET}")
+                else:
+                    print(f" {YELLOW}Public link not ready yet. Starting tunnel...{RESET}")
+                    start_public_tunnel()
             elif cmd == "s" or cmd == "status" or cmd == "host":
                 print_banner(local_ip)
             elif cmd == "g" or cmd == "git" or cmd == "github":
                 setup_github_connection()
             elif cmd == "help":
-                print("Commands: [o] Open Browser | [g] GitHub Connect | [s] Show Host Links | [q] Quit")
+                print("Commands:")
+                print("  [o] Open Browser | [t] Show Public Link | [c] Copy Public Link")
+                print("  [s] Show Host Links | [g] GitHub Connect | [q] Stop & Exit")
             else:
                 if cmd:
                     print(f"Unknown command: '{cmd}'. Press [s] to view links or [q] to quit.")

@@ -3,6 +3,58 @@
   "user_preferences": [],
   "analyses": [
     {
+      "id": "cfa426f8-ff1f-488d-96c5-a2eb11f0f76f",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792834264606_bokryz.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a classroom or lecture hall with multiple people seated around you. A person is directly in front of you at 12 o'clock, 2 feet away.",
+      "detailed_description": "You are in a brightly lit indoor room, likely a classroom or lecture hall. The floor is clear directly ahead for a couple of feet, but there are desks and seated individuals surrounding you. There is a prominent person wearing glasses directly in front of you at 12 o'clock, about 2 feet away. Another person wearing a striped shirt and a cap is seated to your right at 2 o'clock, about 3 feet away. Several other students are visible seated at desks further back in the room.",
+      "detected_text": "LINGAYA'S VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your forward right",
+          "distance": "3 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desks in the background",
+          "distance": "5 feet",
+          "clockPosition": "10 o'clock to 12 o'clock"
+        },
+        {
+          "name": "desk",
+          "position": "in front and to your right",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock to 3 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding your immediate area",
+          "severity": "low",
+          "advice": "Proceed carefully if moving forward or to the sides to avoid bumping into furniture or seated individuals."
+        }
+      ],
+      "navigation_advice": "The pathway directly in front is clear for about 2 feet, but you are seated at a desk with people close by. Move slowly and check your sides before attempting to stand or walk.",
+      "audio_transcript": "Scene overview: There are 10 people near you. Objects around you include a laptop at 11 o'clock and desks at 12 o'clock and 2 o'clock. Layout: Seated in a classroom environment with desks surrounding you. You are in a classroom or lecture hall with multiple people seated around you. A person is directly in front of you at 12 o'clock, 2 feet away. Visible text: \"LINGAYA'S VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 9872,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T09:31:04.609Z",
+      "updated_at": "2026-10-24T09:31:04.609Z"
+    },
+    {
       "id": "4cab6b5d-0c72-4b38-93a7-03357409aaef",
       "user_id": null,
       "image_url": "/uploads/capture_1792831978716_hi6p8x.jpeg",
