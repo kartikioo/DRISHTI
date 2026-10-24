@@ -3,6 +3,91 @@
   "user_preferences": [],
   "analyses": [
     {
+      "id": "494ba098-131f-4645-a37f-4b3ade3e01f1",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792830453268_8x8j66.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "No currency or objects are visible in the completely dark image.",
+      "detailed_description": "The camera feed is entirely dark, preventing any visual analysis of the surroundings, objects, or currency.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "Complete darkness or blocked camera lens",
+          "severity": "high",
+          "advice": "Please check if the camera lens is covered or if you are in an unlit area."
+        }
+      ],
+      "navigation_advice": "Exercise extreme caution as the camera view is entirely black. Ensure lighting is adequate before moving.",
+      "audio_transcript": "No currency banknotes or coins detected. Please place the money flat and centered in front of the camera, and ensure there is enough light.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 1980,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:27:33.269Z",
+      "updated_at": "2026-10-24T08:27:33.269Z"
+    },
+    {
+      "id": "d9f7d7de-5cc5-4dd6-8c28-1cda8f288986",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792830411186_mcnpuz.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in an indoor classroom or computer lab with several people using laptops around you.",
+      "detailed_description": "The scene is a brightly lit classroom or laboratory with a high white ceiling and fluorescent lighting panels. There are multiple people seated at desks with open laptops in front of them. In the foreground, three prominent individuals are visible: one person with long curly hair is seated to your left at 9 o'clock, about 2 feet away; a central person wearing glasses is directly in front of you at 12 o'clock, about 2 feet away; and a person wearing glasses is to your right at 2 o'clock, about 2 feet away. In the background, several other students are seated at desks working on laptops. Desks and chairs are arranged in rows, creating a typical academic environment.",
+      "detected_text": "LINGAYAS",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "forward right",
+          "distance": "2 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "straight ahead",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "left",
+          "distance": "2 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "background desks",
+          "distance": "6 feet",
+          "clockPosition": "11 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "immediate surroundings",
+          "distance": "3 feet",
+          "clockPosition": "10 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding your immediate area",
+          "severity": "low",
+          "advice": "Move carefully as there are chairs and tables close by on your left and right."
+        }
+      ],
+      "navigation_advice": "The space directly in front of you is occupied by people and desks. Pivot slightly right or left to find an open walkway between the desk rows.",
+      "audio_transcript": "Scene overview: There are 9 people near you. Objects around you include laptops and chairs at desks around 12 o'clock, 9 o'clock, and 2 o'clock. Layout: An indoor classroom with desks and chairs. You are surrounded by people using laptops. Please proceed with caution if you intend to move. Visible text: \"LINGAYAS\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7797,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:26:51.190Z",
+      "updated_at": "2026-10-24T08:26:51.190Z"
+    },
+    {
       "id": "664fd240-5fbd-4b1c-9971-aa8f05ead7b2",
       "user_id": null,
       "image_url": "/uploads/capture_1792829691114_daj3up.jpeg",
