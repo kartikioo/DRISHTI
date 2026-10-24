@@ -3,6 +3,33 @@
   "user_preferences": [],
   "analyses": [
     {
+      "id": "5cb7ec89-e7a0-4dcd-b156-73e5cfabd9ab",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792831059585_66x6ym.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "No currency banknotes or coins detected. The image is completely dark or blank.",
+      "detailed_description": "The provided image does not display any visible objects, text, or currency. It appears completely dark or unlit.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "No visual information available due to dark image",
+          "severity": "low",
+          "advice": "Please ensure the camera lens is unobstructed and adequate lighting is present."
+        }
+      ],
+      "navigation_advice": "Exercise caution as the camera view is obstructed or dark.",
+      "audio_transcript": "No currency banknotes or coins detected. Please place the money flat and centered in front of the camera.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 2723,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:37:39.588Z",
+      "updated_at": "2026-10-24T08:37:39.588Z"
+    },
+    {
       "id": "494ba098-131f-4645-a37f-4b3ade3e01f1",
       "user_id": null,
       "image_url": "/uploads/capture_1792830453268_8x8j66.jpeg",
