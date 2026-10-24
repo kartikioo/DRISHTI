@@ -6,5 +6,8 @@
   "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
   "terminal.integrated.env.osx": {
     "PATH": "${env:HOME}/.nodejs/bin:${env:PATH}"
+  },
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Program Files\\nodejs;${env:APPDATA}\\npm;${env:PATH}"
   }
 }

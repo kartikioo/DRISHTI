@@ -28,21 +28,33 @@ DIM = "\033[2m"
 MAGENTA = "\033[95m"
 RESET = "\033[0m"
 
+IS_WIN = sys.platform == "win32"
+IS_MAC = sys.platform == "darwin"
+
 BASE_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = BASE_DIR / "backend-drishti"
 FRONTEND_DIR = BASE_DIR / "frontend-drishti"
 
-# Enhance PATH with common Node locations
-NODE_PATHS = [
-    Path.home() / ".nodejs" / "bin",
-    Path.home() / ".nvm" / "versions" / "node",
-    Path("/usr/local/bin"),
-    Path("/opt/homebrew/bin"),
-]
+# Enhance PATH with common Node locations across Mac, Windows, Linux
+if IS_WIN:
+    NODE_PATHS = [
+        Path(os.environ.get("ProgramFiles", "C:\\Program Files")) / "nodejs",
+        Path(os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")) / "nodejs",
+        Path(os.environ.get("APPDATA", "")) / "npm",
+        Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "nodejs",
+    ]
+else:
+    NODE_PATHS = [
+        Path.home() / ".nodejs" / "bin",
+        Path.home() / ".nvm" / "versions" / "node",
+        Path("/usr/local/bin"),
+        Path("/opt/homebrew/bin"),
+    ]
+
 current_path = os.environ.get("PATH", "")
 extra_paths = [str(p) for p in NODE_PATHS if p.exists() and str(p) not in current_path]
 if extra_paths:
-    os.environ["PATH"] = ":".join(extra_paths) + ":" + current_path
+    os.environ["PATH"] = os.pathsep.join(extra_paths) + os.pathsep + current_path
 
 processes = []
 public_tunnel_url = ""
@@ -70,9 +82,14 @@ def is_port_in_use(port: int) -> bool:
 
 
 def copy_to_clipboard(text: str) -> bool:
-    """Copy text to macOS clipboard using pbcopy."""
+    """Copy text to clipboard (cross-platform: macOS pbcopy, Windows clip, Linux xclip)."""
     try:
-        proc = subprocess.Popen(["pbcopy"], stdin=subprocess.PIPE)
+        if IS_WIN:
+            proc = subprocess.Popen(["clip"], stdin=subprocess.PIPE, shell=True)
+        elif IS_MAC:
+            proc = subprocess.Popen(["pbcopy"], stdin=subprocess.PIPE)
+        else:
+            proc = subprocess.Popen(["xclip", "-selection", "clipboard"], stdin=subprocess.PIPE)
         proc.communicate(input=text.encode("utf-8"))
         return proc.returncode == 0
     except Exception:
@@ -100,7 +117,8 @@ def start_public_tunnel():
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
-            bufsize=1
+            bufsize=1,
+            shell=IS_WIN
         )
         processes.append(proc)
 
@@ -178,7 +196,8 @@ def start_backend():
         cwd=str(BACKEND_DIR),
         stdout=subprocess.DEVNULL,
         stderr=subprocess.PIPE,
-        env=os.environ
+        env=os.environ,
+        shell=IS_WIN
     )
     processes.append(proc)
     time.sleep(1.0)
@@ -193,12 +212,14 @@ def start_frontend():
         return None
 
     print(f" {YELLOW}⏳ Starting Vite Frontend server with --host 0.0.0.0...{RESET}")
+    cmd = ["npx.cmd" if IS_WIN else "npx", "vite", "--host", "0.0.0.0", "--port", "5173"]
     proc = subprocess.Popen(
-        ["npx", "vite", "--host", "0.0.0.0", "--port", "5173"],
+        cmd,
         cwd=str(FRONTEND_DIR),
         stdout=subprocess.DEVNULL,
         stderr=subprocess.PIPE,
-        env=os.environ
+        env=os.environ,
+        shell=IS_WIN
     )
     processes.append(proc)
     time.sleep(1.2)
@@ -264,10 +285,20 @@ def cleanup(signum=None, frame=None):
     for proc in processes:
         if proc.poll() is None:
             try:
-                proc.terminate()
-                proc.wait(timeout=2)
+                if IS_WIN:
+                    subprocess.run(
+                        ["taskkill", "/F", "/T", "/PID", str(proc.pid)],
+                        stdout=subprocess.DEVNULL,
+                        stderr=subprocess.DEVNULL
+                    )
+                else:
+                    proc.terminate()
+                    proc.wait(timeout=2)
             except Exception:
-                proc.kill()
+                try:
+                    proc.kill()
+                except Exception:
+                    pass
     print(f"{GREEN}All servers stopped cleanly. Goodbye!{RESET}")
     sys.exit(0)
 
