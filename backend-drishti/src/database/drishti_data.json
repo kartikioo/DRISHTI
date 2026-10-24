@@ -3,6 +3,27 @@
   "user_preferences": [],
   "analyses": [
     {
+      "id": "4cab6b5d-0c72-4b38-93a7-03357409aaef",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792831978716_hi6p8x.jpeg",
+      "mode": "text",
+      "custom_prompt": "keys, phone, cup, or charger",
+      "summary": "Reading text in medicine and book cannot be detected.",
+      "detailed_description": "Reading text in medicine and book cannot be detected.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [],
+      "navigation_advice": "Please hold the medicine package or book directly in front of the camera.",
+      "audio_transcript": "Reading text in medicine and book cannot be detected. Please hold the medicine package or book directly in front of the camera.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 1843,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:52:58.720Z",
+      "updated_at": "2026-10-24T08:52:58.720Z"
+    },
+    {
       "id": "5cb7ec89-e7a0-4dcd-b156-73e5cfabd9ab",
       "user_id": null,
       "image_url": "/uploads/capture_1792831059585_66x6ym.jpeg",

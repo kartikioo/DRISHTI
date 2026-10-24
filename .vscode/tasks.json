@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Drishti Host (All-in-One)",
+      "type": "shell",
+      "command": "python3",
+      "args": ["${workspaceFolder}/main.py"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Connect and Push to GitHub",
+      "type": "shell",
+      "command": "python3",
+      "args": ["${workspaceFolder}/main.py", "--github"],
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "git.autoRepositoryDetection": "subFolders",
+  "git.repositoryScanMaxDepth": 4,
+  "git.enabled": true,
+  "git.openRepositoryInParentFolders": "always",
+  "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+  "terminal.integrated.env.osx": {
+    "PATH": "${env:HOME}/.nodejs/bin:${env:PATH}"
+  }
+}

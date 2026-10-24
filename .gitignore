@@ -27,3 +27,8 @@ yarn-error.log*
 # Uploads & local data storage
 backend-drishti/uploads/
 backend-drishti/src/database/data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
