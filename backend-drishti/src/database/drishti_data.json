@@ -1,0 +1,819 @@
+{
+  "users": [],
+  "user_preferences": [],
+  "analyses": [
+    {
+      "id": "664fd240-5fbd-4b1c-9971-aa8f05ead7b2",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829691114_daj3up.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a well-lit classroom or office space surrounded by several people and desks.",
+      "detailed_description": "The scene is a brightly lit indoor classroom or office environment with multiple people seated at desks and working on laptops. There is a prominent person in the foreground wearing glasses and a blue shirt, positioned right in front of you. Other individuals are seated at various distances in rows behind desks extending into the background. The room features a light-colored ceiling with square LED light panels and ceiling fans. A door is visible in the background to the left, and an air conditioning unit is mounted on the wall to the right. The pathway directly ahead has desks and chairs, so caution is advised when moving forward.",
+      "detected_text": "LINGAYAS",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front of you, upper body visible",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your left edge",
+          "distance": "1.5 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your right edge, wearing glasses",
+          "distance": "2 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desks in the background",
+          "distance": "8-12 feet",
+          "clockPosition": "11 to 2 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "near the desk in the mid-ground",
+          "distance": "5 feet",
+          "clockPosition": "10 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding the forward path",
+          "severity": "low",
+          "advice": "Move slowly and feel ahead with your hands or cane to avoid bumping into nearby furniture."
+        }
+      ],
+      "navigation_advice": "The space immediately in front of you is occupied by a person at 12 o'clock and desks slightly further away. Pivot slightly and walk carefully if you wish to exit.",
+      "audio_transcript": "Scene overview: There are 8 people near you. Objects around you include laptops and chairs at various distances from 10 to 2 o'clock. Layout: Indoor room with desks and chairs partially obstructing the walkway. You are in a classroom setting with multiple people working around you. Visible text: \"LINGAYAS\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3638,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:14:51.116Z",
+      "updated_at": "2026-10-24T08:14:51.116Z"
+    },
+    {
+      "id": "f3cd88d5-599e-4b20-bf3e-a3f588e94496",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829429242_i0u60q.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "Total currency detected: 10 Rupees. You have one 10 Rupee coin held up at 2 o'clock in front of you.",
+      "detailed_description": "An indoor classroom environment with multiple students seated at desks with laptops in the background. In the foreground at 2 o'clock, a person is holding up a single 10 Rupee coin close to the camera. Another person is seated at 9 o'clock to your left.",
+      "detected_text": "",
+      "detected_objects": [
+        {
+          "name": "coin",
+          "position": "held in hand to the right",
+          "distance": "1.5 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "directly in front",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your left",
+          "distance": "2 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in background",
+          "distance": "6 feet",
+          "clockPosition": "11 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "Floor is clear immediately around you. Desks and chairs are present ahead at a distance of 4 to 6 feet.",
+      "audio_transcript": "Total currency detected: 10 INR. Breakdown: One 10 Rupee coin. Total currency detected: 10 Rupees. You have one 10 Rupee coin held up at 2 o'clock in front of you.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3699,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:10:29.243Z",
+      "updated_at": "2026-10-24T08:10:29.243Z"
+    },
+    {
+      "id": "6110b61d-5f45-42d5-9432-0bd7943490a6",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829416787_0u1g22.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "Total currency detected: 10 Rupees. You have one 10 Rupee coin held up at 2 o'clock in front of you.",
+      "detailed_description": "The scene is an indoor classroom or office setting brightly lit by overhead fluorescent panel lights. A person in the center holds a single coin between their fingers at approximately 2 o'clock, 1.5 feet away from your perspective. Another person is seated to your left at 9 o'clock, and a third person stands further back at 11 o'clock. Laptops are visible on tables in the background.",
+      "detected_text": "",
+      "detected_objects": [
+        {
+          "name": "coin",
+          "position": "held in hand",
+          "distance": "1.5 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "center foreground holding coin",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "seated to your left",
+          "distance": "2 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "standing in background",
+          "distance": "6 feet",
+          "clockPosition": "11 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on table in background",
+          "distance": "5 feet",
+          "clockPosition": "11 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The immediate area in front of you is clear. A desk is present nearby at 12 o'clock within arm's reach.",
+      "audio_transcript": "Total currency detected: 10 INR. Breakdown: One 10 Rupee coin. Total currency detected: 10 Rupees. You have one 10 Rupee coin held up at 2 o'clock in front of you.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3796,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:10:16.789Z",
+      "updated_at": "2026-10-24T08:10:16.789Z"
+    },
+    {
+      "id": "b8a08f2c-4130-4b4c-bdef-e464fccf948d",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829407268_hgxbha.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "You are in a classroom or lecture hall. Several people and laptops are visible around you.",
+      "detailed_description": "This appears to be an indoor classroom or lecture hall with bright overhead lighting and white walls. There are multiple desks and chairs set up in rows. Several people are present, including two individuals close to the camera: one wearing a dark blue t-shirt and glasses at 12 o'clock, and another wearing a green shirt to your left at 10 o'clock. Multiple other students are seated further back using laptops on desks.",
+      "detected_text": "VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front of you",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your forward left",
+          "distance": "2 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in the background",
+          "distance": "8 feet",
+          "clockPosition": "11 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "directly in front of you",
+          "distance": "3 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding you",
+          "severity": "low",
+          "advice": "Navigate carefully around the desks and chairs directly in front and to your sides."
+        }
+      ],
+      "navigation_advice": "The floor is clear immediately around you for about 2 feet, but desks and chairs are positioned closely around your sides and front.",
+      "audio_transcript": "No currency banknotes or coins detected. You are in a classroom with multiple people and desks around you. There is a person directly in front at 12 o'clock and another to your left at 10 o'clock. The floor is clear for a couple of feet.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 4010,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:10:07.269Z",
+      "updated_at": "2026-10-24T08:10:07.269Z"
+    },
+    {
+      "id": "2765384f-35c8-4f25-896a-abc11c314514",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829377341_ru1hoh.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a well-lit classroom or lecture hall filled with multiple students seated at desks with laptops. A person with glasses is centered right in front of you.",
+      "detailed_description": "The scene is a spacious classroom with bright overhead lighting. A young man wearing glasses and a blue shirt with a lanyard is seated directly in front of you at 12 o'clock, approximately 2 feet away. Several other students are seated at desks further back and to the sides, many using laptops. Desks, chairs, and bags are arranged throughout the room. The floor is clear immediately around you.",
+      "detected_text": "LINGAYA'S VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in the background",
+          "distance": "6 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "to your right",
+          "distance": "3 feet",
+          "clockPosition": "2 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding your immediate area",
+          "severity": "low",
+          "advice": "Move forward slowly; desks and chairs are positioned around you."
+        }
+      ],
+      "navigation_advice": "Floor is clear directly in front of you for 2 feet before reaching the desk. Walk forward with caution.",
+      "audio_transcript": "Scene overview: There are 10 people near you. Objects around you include a person at 12 o'clock, a laptop at 10 o'clock, and chairs at 2 o'clock. Layout: classroom layout with desks and open path immediately ahead. You are in a well-lit classroom with multiple students seated at desks. A person with glasses is right in front of you. Visible text: \"LINGAYA'S VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3904,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:09:37.341Z",
+      "updated_at": "2026-10-24T08:09:37.341Z"
+    },
+    {
+      "id": "303cb05b-bab4-48b5-aa02-aec7add7e647",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829350352_gq4v8a.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a well-lit classroom or office with multiple people seated at desks using laptops around you.",
+      "detailed_description": "The scene is a brightly lit indoor space, likely a classroom or computer lab, with a white ceiling and square light fixtures. Several people are seated at desks equipped with laptops. A person wearing glasses and a dark blue shirt with a lanyard is directly in front of you at 12 o'clock, about 2 feet away. Another person's shoulder is visible to your left at 9 o'clock. Multiple other individuals are working at desks further back in the room.",
+      "detected_text": "LINGS",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in background",
+          "distance": "6 feet",
+          "clockPosition": "11 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "to your left",
+          "distance": "3 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "beverage carton",
+          "position": "on desk to your right",
+          "distance": "3 feet",
+          "clockPosition": "3 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs nearby",
+          "severity": "low",
+          "advice": "Move forward slowly as there are desks and seating arrangements immediately around you."
+        }
+      ],
+      "navigation_advice": "The floor appears clear directly in front of you for about 2 feet, but you are surrounded by desks and chairs. Proceed with caution.",
+      "audio_transcript": "Scene overview: There are 10 people near you. Objects around you include laptops and desks at various positions. Layout: Indoor room with multiple desks and chairs. You are facing a person sitting 2 feet away at 12 o'clock. The path immediately ahead is clear for a couple of feet before reaching the desk. Visible text: \"LINGS\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3259,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:09:10.353Z",
+      "updated_at": "2026-10-24T08:09:10.353Z"
+    },
+    {
+      "id": "b1aac0e2-a7ec-4a27-a9ed-ed22c5f55877",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829018723_ebrj2e.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "You are facing a laptop computer displaying an interface with a camera feed of a classroom, and no currency is visible.",
+      "detailed_description": "The image shows a laptop keyboard at the bottom, with the screen displaying a web application featuring a video feed of a person holding a phone, seated in what appears to be a classroom or study hall with other students in the background. Several application icons are visible on the dock at the bottom of the screen.",
+      "detected_text": "localhost, Assistant, History, Settings, Flip Camera, Pause, Upload Image, DESCRIBE SCENE, Shortcut: Space or C, Analysis Notification, AI Vision Analysis failed (gemini): Request failed with status code 404, Help",
+      "detected_objects": [
+        {
+          "name": "laptop keyboard",
+          "position": "directly in front of you at the bottom",
+          "distance": "1 foot",
+          "clockPosition": "6 o'clock"
+        },
+        {
+          "name": "laptop screen",
+          "position": "straight ahead",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "Your immediate area is clear. The laptop is directly in front of you at 12 o'clock, about 2 feet away.",
+      "audio_transcript": "No currency banknotes or coins detected. Please place the money flat and centered in front of the camera. You are currently facing a laptop displaying a classroom video feed.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 4448,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:38.725Z",
+      "updated_at": "2026-10-24T08:03:38.725Z"
+    },
+    {
+      "id": "fbf5611e-663e-4a37-a59a-ea51e319f38c",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829014267_b6e8n6.jpeg",
+      "mode": "find",
+      "custom_prompt": "laptop",
+      "summary": "Found laptop: located at your 12 o'clock, approximately 2 feet away.",
+      "detailed_description": "The main laptop you are currently using is directly in front of you, showing a display with a video call interface and other background students. A smaller laptop keyboard is visible in the foreground. Several other laptops are visible in the background on desks.",
+      "detected_text": "localhost Assistant History Settings Flip Camera Pause Upload Image DESCRIBE SCENE Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404 Help",
+      "detected_objects": [
+        {
+          "name": "laptop",
+          "position": "directly in front on desk",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The desk and keyboard are right in front of you. Safe to type.",
+      "audio_transcript": "Found laptop: located at your 12 o'clock, approximately 2 feet away.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 4446,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:34.268Z",
+      "updated_at": "2026-10-24T08:03:34.268Z"
+    },
+    {
+      "id": "e95142cc-cb14-429d-8393-119b8cf348d7",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829009814_vot7pz.jpeg",
+      "mode": "text",
+      "custom_prompt": null,
+      "summary": "Reading text in medicine and book cannot be detected.",
+      "detailed_description": "No medicine package or book is present in the image view.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [],
+      "navigation_advice": "",
+      "audio_transcript": "Reading text in medicine and book cannot be detected. Please hold the medicine package or book directly in front of the camera.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5731,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:29.815Z",
+      "updated_at": "2026-10-24T08:03:29.815Z"
+    },
+    {
+      "id": "4fc83ca3-93e7-4cf8-88fe-58cf27057aa6",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829004064_xlh1vi.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are facing a laptop screen displaying a video call interface and a classroom environment with multiple people seated at desks.",
+      "detailed_description": "The image shows a laptop keyboard in the foreground, with the screen displaying a web browser interface. Inside the browser is a video feed of a classroom. In the foreground of the video at 12 o'clock, a young person with dark hair and glasses is holding a smartphone, facing the camera. Several other people are visible seated at desks further back in the classroom setting. The laptop keyboard is silver with standard QWERTY layout, and the bottom of the screen shows an application dock.",
+      "detected_text": "localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404",
+      "detected_objects": [
+        {
+          "name": "laptop",
+          "position": "directly in front of you on the desk",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "displayed on the laptop screen",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "Your immediate workspace is clear. The laptop is directly in front of you at 12 o'clock.",
+      "audio_transcript": "Scene overview: There are 6 people near you visible on the screen. Objects around you include a laptop at 12 o'clock. Layout: open desk space directly in front of you. You are facing a laptop screen displaying a classroom video call. Visible text: \"localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5878,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:24.065Z",
+      "updated_at": "2026-10-24T08:03:24.065Z"
+    },
+    {
+      "id": "828fbdc3-6320-4e7d-9de6-7934b0fada66",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792829003786_v1oxcb.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a well-lit classroom or lecture hall with multiple people and laptop computers surrounding you. A primary person is directly in front of you at 12 o'clock.",
+      "detailed_description": "The scene is a bright classroom or study hall with a white ceiling and walls. There are numerous people seated at desks, many working on laptops. Directly in front of you at 12 o'clock is a young man wearing glasses and a blue t-shirt with an ID lanyard, approximately 2 feet away. To your left at 9 o'clock is another person, and to your right at 3 o'clock is a person partially in frame. Several laptops and a small beverage carton are visible on desks in the room. The floor is clear immediately around you, providing a safe and open forward path.",
+      "detected_text": "VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your left",
+          "distance": "3 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your right",
+          "distance": "2 feet",
+          "clockPosition": "3 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in background",
+          "distance": "6 feet",
+          "clockPosition": "11 o'clock"
+        },
+        {
+          "name": "juice box",
+          "position": "on desk to your right",
+          "distance": "3 feet",
+          "clockPosition": "2 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The floor immediately in front of you is clear for at least 4 feet. You can move forward safely.",
+      "audio_transcript": "Scene overview: There are 10 people near you. Objects around you include laptops and a juice box on desks at 11 and 2 o'clock. Layout: open path. You are in a classroom with a person directly in front of you at 12 o'clock, two feet away. The path ahead is completely clear. Visible text: \"VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7535,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:23.787Z",
+      "updated_at": "2026-10-24T08:03:23.787Z"
+    },
+    {
+      "id": "1f24afa8-e833-4844-92bb-2579c7eb7bda",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792828986849_ym580z.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are facing a laptop screen displaying a video call interface with a classroom setting. Several people are visible in the background and a laptop keyboard is in the foreground.",
+      "detailed_description": "The image shows a laptop displaying a software interface with a live video feed of a classroom. In the video feed, a young man with dark hair and glasses is holding a smartphone at 12 o'clock, approximately 2 feet away in the virtual space. Several other students are seated at desks in the background. In the physical foreground, a laptop keyboard is visible from 6 o'clock to 12 o'clock. The layout is structured like a classroom or office setting.",
+      "detected_text": "localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404 Help",
+      "detected_objects": [
+        {
+          "name": "laptop keyboard",
+          "position": "directly in front of you on the desk",
+          "distance": "1 foot",
+          "clockPosition": "6 o'clock"
+        },
+        {
+          "name": "laptop screen",
+          "position": "straight ahead displaying a virtual meeting",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "on the screen directly ahead holding a phone",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Laptop edge and desk surface",
+          "severity": "low",
+          "advice": "Be mindful of the laptop keyboard and edge of the desk directly in front of you."
+        }
+      ],
+      "navigation_advice": "Your immediate physical space directly in front of the keyboard appears clear, but you are seated at a desk facing a laptop. Remain seated or proceed with caution if standing up.",
+      "audio_transcript": "Scene overview: There are 5 people near you displayed on the screen. Objects around you include a laptop keyboard at 6 o'clock and a laptop screen at 12 o'clock. Layout: Seated at a desk facing a laptop. You are facing a laptop screen displaying a classroom video call with multiple students. Visible text: \"localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404 Help\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7453,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:03:06.852Z",
+      "updated_at": "2026-10-24T08:03:06.852Z"
+    },
+    {
+      "id": "06fdf740-9721-473c-82d2-9ef5df3c08d8",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792828900939_t42iez.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are facing a laptop screen displaying a video call interface and an error message, with multiple people seated at desks in a classroom visible on the screen.",
+      "detailed_description": "The image shows a laptop keyboard in the foreground and a screen displaying a video conference or software interface. On the screen, a young man wearing glasses is holding up a smartphone, and several other people are visible seated at desks in what appears to be a classroom or lecture hall setting. There is also an error notification banner displayed on the screen reading 'Analysis Notification: AI Vision Analysis failed (gemini): Request failed with status code 404'.",
+      "detected_text": "localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404",
+      "detected_objects": [
+        {
+          "name": "laptop",
+          "position": "directly in front of you on the desk",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "displayed on the laptop screen in front of you",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Laptop keyboard and desk edge directly in front",
+          "severity": "low",
+          "advice": "Keep hands steady near the keyboard if typing."
+        }
+      ],
+      "navigation_advice": "Your immediate workspace at the desk is clear. You are seated directly in front of your laptop.",
+      "audio_transcript": "Scene overview: There are 1 people near you. Objects around you include laptop at 12 o'clock. Layout: open desk space directly in front of you. You are facing a laptop screen displaying a video interface and an error notification. Visible text: \"localhost Assistant History Settings Flip Camera Pause DESCRIBE SCENE Shortcut Space or C Analysis Notification AI Vision Analysis failed (gemini): Request failed with status code 404\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 6610,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:01:40.940Z",
+      "updated_at": "2026-10-24T08:01:40.940Z"
+    },
+    {
+      "id": "99dd5bf2-d2f2-40c6-906a-ab1a8207122e",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792828899970_q0gva4.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a classroom or lecture hall. There are multiple people around you working at desks, with laptops visible on the tables.",
+      "detailed_description": "The scene shows a well-lit indoor classroom or lecture hall with a high ceiling, white walls, and bright overhead lights. Several individuals are seated at rows of desks facing forward or working on laptops. A person wearing glasses and a dark blue t-shirt is centered prominently in the foreground at 12 o'clock, approximately 2 feet away. Other people are seated at desks extending towards the background on the left and right sides. Laptops and chairs are present on the desks.",
+      "detected_text": "LINGAYA'S VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "directly in front of you, centered",
+          "distance": "2 feet",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "laptop",
+          "position": "on desk in the background",
+          "distance": "6 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "chair",
+          "position": "to your front left",
+          "distance": "3 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "juice box / drink",
+          "position": "on desk to your right",
+          "distance": "3 feet",
+          "clockPosition": "2 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Desks and chairs surrounding your immediate area",
+          "severity": "low",
+          "advice": "Move slowly and feel for chair backs or table edges if walking forward."
+        }
+      ],
+      "navigation_advice": "Floor is clear immediately around you for 2 feet, but you are seated amongst rows of desks and chairs. Proceed with caution if standing up.",
+      "audio_transcript": "Scene overview: There are 8 people near you. Objects around you include a laptop at 10 o'clock and a drink carton at 2 o'clock. Layout: A classroom environment with rows of desks and chairs. You are facing a person sitting 2 feet in front of you. Visible text: \"LINGAYA'S VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7398,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T08:01:39.973Z",
+      "updated_at": "2026-10-24T08:01:39.973Z"
+    },
+    {
+      "id": "09f46769-91dd-4c49-887a-8fd346a736e0",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792826463816_y4v709.jpeg",
+      "mode": "text",
+      "custom_prompt": null,
+      "summary": "You are facing a person holding up a smartphone displaying technical setup instructions, while another person stands to your left eating.",
+      "detailed_description": "An indoor office or classroom setting. In the foreground slightly to your right, a smartphone is held up close, displaying text instructions related to setting up a backend environment file and AI API keys. In the center foreground, a young man with dark hair and glasses wearing a blue t-shirt is looking forward. To your left, another person in a green shirt is holding a paper plate. In the background, two people are seated at desks.",
+      "detected_text": "Locate the file. Open your project folder and navigate to the backend-drishti/ directory. Look for a file named .env. Note: If you only see a file named .env.example or .env.template, rename a copy of it to exactly .env. Open the file: Open the .env file in any text editor (like VS Code, Notepad, or Vim). Add your key: Paste one of the following lines into the file, depending on which AI provider you want to use: 1. For Google Gemini: env AI_API_KEY=your_actual_gemini_api_ Use code with caution. 2. For OpenAI: env AI_API_KEY=your_actual_openai_api_ Ask anything",
+      "detected_objects": [
+        {
+          "name": "smartphone displaying text",
+          "position": "directly in front, slightly to your right",
+          "distance": "1.5 feet"
+        },
+        {
+          "name": "young man with glasses",
+          "position": "center foreground",
+          "distance": "2.5 feet"
+        },
+        {
+          "name": "person holding paper plate",
+          "position": "to your immediate left",
+          "distance": "2 feet"
+        },
+        {
+          "name": "seated people",
+          "position": "in the background",
+          "distance": "6 feet"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The immediate area in front of you is clear for about 2 feet. A person is close to your left and another person holding a phone is right in front of you.",
+      "audio_transcript": "There is a phone held right in front of you showing technical setup instructions for an AI key. A man with glasses is sitting directly ahead, and someone is standing to your left.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5688,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T07:21:03.819Z",
+      "updated_at": "2026-10-24T07:21:03.819Z"
+    },
+    {
+      "id": "f4269423-1740-41c4-b5ed-c238b0c96692",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792826436547_9i2f3i.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in an indoor office or classroom setting with two people nearby, one holding up a small black case close to you.",
+      "detailed_description": "The scene is brightly lit indoors, appearing like an office or classroom with white ceiling tiles and fluorescent lighting. To your immediate left, a person wearing glasses is holding up a small, oval black charging case close to your view. To your right, another person wearing round glasses and a white and green jacket is seated closer to the camera. In the background, two other individuals are seated at desks further away.",
+      "detected_text": "",
+      "detected_objects": [
+        {
+          "name": "Black oval case",
+          "position": "To your immediate left, held in a hand",
+          "distance": "1 foot"
+        },
+        {
+          "name": "Person with glasses",
+          "position": "To your left",
+          "distance": "2 feet"
+        },
+        {
+          "name": "Person in jacket with round glasses",
+          "position": "To your right",
+          "distance": "1.5 feet"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "You are seated or stationary with people around you. The immediate area in front of you is clear, but check your surroundings before standing up.",
+      "audio_transcript": "Hello! There are two people near you. A person to your left is holding up a small black case right in front of you, and another person with round glasses is seated to your right. The space immediately around you is safe.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5937,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T07:20:36.548Z",
+      "updated_at": "2026-10-24T07:20:36.548Z"
+    },
+    {
+      "id": "ae63a802-8c96-4ee9-9c97-dbdf0fe08cb0",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792826402998_081x6p.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are in a well-lit indoor classroom or office setting. A person is holding up a small black circular object directly to your right.",
+      "detailed_description": "The scene is a bright, indoor classroom or study hall with white walls and a tiled ceiling with recessed fluorescent lighting. Several people are seated at desks in the background, some working on laptops. In the foreground, a person wearing glasses and a blue shirt is in the center. To your right, a hand holds up a smooth, dark, round object, possibly a wireless earbud charging case, approximately 1 foot away. Another person wearing glasses is seated to the far right.",
+      "detected_text": "ONG",
+      "detected_objects": [
+        {
+          "name": "black round object (charging case)",
+          "position": "to your right, held in hand",
+          "distance": "1 foot"
+        },
+        {
+          "name": "person holding object",
+          "position": "center foreground",
+          "distance": "2 feet"
+        },
+        {
+          "name": "person",
+          "position": "to your right",
+          "distance": "1.5 feet"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The immediate area in front of you appears clear. You are seated at a desk inside a room.",
+      "audio_transcript": "Hello! You are in an indoor classroom or office. A small black rounded case is being held up close to your right side. There are people seated around you, and the path directly ahead is clear.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 4009,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T07:20:03.002Z",
+      "updated_at": "2026-10-24T07:20:03.002Z"
+    },
+    {
+      "id": "a8fe03a9-31d4-4b88-8505-e44f2230a623",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792826313903_3m402e.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are indoors with three people around you. A person directly in front is holding up a small black oval object close to your view.",
+      "detailed_description": "The scene is set in what appears to be an indoor room or office with bright overhead lighting. In the center, a person wearing dark glasses and a blue shirt holds a dark oval object, possibly a charging case, up near their right hand directly in front of you. To your left, another person wearing a red button-down shirt stands slightly out of focus. To your right, a third person wearing a light jacket sits nearby. The floor and immediate surroundings appear clear of major obstacles.",
+      "detected_text": "",
+      "detected_objects": [
+        {
+          "name": "Person in blue shirt",
+          "position": "directly in front",
+          "distance": "2 feet"
+        },
+        {
+          "name": "Black oval object / earbud case",
+          "position": "held in hand to your right",
+          "distance": "1.5 feet"
+        },
+        {
+          "name": "Person in red shirt",
+          "position": "to your immediate left",
+          "distance": "2 feet"
+        },
+        {
+          "name": "Person in jacket",
+          "position": "to your right",
+          "distance": "3 feet"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The floor immediately in front of you is clear. You can safely remain seated or walk forward.",
+      "audio_transcript": "Hello! You are surrounded by three people in an indoor space. The person right in front of you is holding up a small black object near your right hand. Everything around you is clear of hazards.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 157828,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T07:18:33.904Z",
+      "updated_at": "2026-10-24T07:18:33.904Z"
+    },
+    {
+      "id": "29e1ee54-9dc7-40c1-a17d-c54d07be72c0",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792826240565_iav8nk.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are indoors in what appears to be a brightly lit classroom or office, with a person holding up a small dark object directly in front of you.",
+      "detailed_description": "The scene is set in an indoor space with white walls and a tiled ceiling featuring fluorescent lighting. In the foreground, a young person wearing a dark blue t-shirt and glasses holds up a small, oval-shaped black object (likely an earbud charging case) in their right hand, approximately 1.5 feet away. Another person is seated to your right, and several other individuals are visible working at desks with laptops in the background to the left. The area directly in front of you is clear.",
+      "detected_text": "LINGAYA'S VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "Person holding object",
+          "position": "directly in front",
+          "distance": "2 feet"
+        },
+        {
+          "name": "Black oval case",
+          "position": "slightly to your right, held up",
+          "distance": "1.5 feet"
+        },
+        {
+          "name": "Person on the right",
+          "position": "to your right",
+          "distance": "3 feet"
+        },
+        {
+          "name": "Laptops and desks",
+          "position": "in the background",
+          "distance": "6 to 8 feet"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The space immediately in front of you is clear. You can move forward safely.",
+      "audio_transcript": "Hello! You are in an indoor room with other people around. A person directly in front of you is holding up a small black case. The floor right ahead is clear for safe movement.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 137645,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T07:17:20.571Z",
+      "updated_at": "2026-10-24T07:17:20.571Z"
+    }
+  ]
+}

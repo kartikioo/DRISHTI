@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #090d16;
+    --text-primary: #f8fafc;
+    --accent-glow: rgba(34, 197, 94, 0.35);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .brand-font {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+
+  /* Accessible Focus States */
+  *:focus-visible {
+    outline: 3px solid #facc15 !important;
+    outline-offset: 3px !important;
+  }
+}
+
+/* HIGH CONTRAST THEMES FOR ACCESSIBILITY */
+.theme-yellow-black {
+  --bg-primary: #000000;
+  --text-primary: #ffff00;
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+.theme-yellow-black * {
+  border-color: #ffff00 !important;
+}
+
+.theme-yellow-black button {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+
+.theme-yellow-black button:hover,
+.theme-yellow-black button:focus {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+.theme-white-black {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.theme-white-black * {
+  border-color: #ffffff !important;
+}
+
+.theme-white-black button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.theme-white-black button:hover,
+.theme-white-black button:focus {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* FONT SCALING CLASSES */
+.font-scale-large {
+  font-size: 115% !important;
+}
+
+.font-scale-xlarge {
+  font-size: 130% !important;
+}
+
+/* Scanner Animation */
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scan {
+  animation: scanline 2.5s ease-in-out infinite alternate;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
