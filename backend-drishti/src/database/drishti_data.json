@@ -3,6 +3,428 @@
   "user_preferences": [],
   "analyses": [
     {
+      "id": "71114afd-9145-4986-9f0c-b92c0f7da55f",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792839729547_vsivce.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are surrounded by multiple people indoors, and someone directly in front of you is holding up a 5 Rupee Indian coin.",
+      "detailed_description": "The scene shows a close-up indoor setting with several individuals gathered around. At 12 o'clock directly in front of you, about 1 foot away, a person is holding a 5 Rupee Indian coin towards the camera. Another person in a maroon and white floral top is seated to your left at 9 o'clock, about 2 feet away. Other people are visible further back and to your right.",
+      "detected_text": "YEAR OF INDEPENDENCE 75 5",
+      "detected_objects": [
+        {
+          "name": "5 Rupee coin",
+          "position": "held in hand directly in front",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your left",
+          "distance": "2 feet",
+          "clockPosition": "9 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "in front holding coin",
+          "distance": "1.5 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "You are stationary surrounded by people. Maintain your position or ask for clearance if you wish to move.",
+      "audio_transcript": "Scene overview: There are 4 people near you. Objects around you include a 5 Rupee Indian coin held right in front of you at 12 o'clock. Layout: Indoor setting with people close by. The coin text reads Year of Independence 75, 5 Rupees.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5740,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T11:02:09.549Z",
+      "updated_at": "2026-10-24T11:02:09.549Z"
+    },
+    {
+      "id": "543a88c2-9453-4179-96d7-96973dac097c",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792839646397_11uwir.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are holding a smartphone showing a lock screen at 12 o'clock, with multiple people standing and sitting around you in an indoor room.",
+      "detailed_description": "The scene is indoors in a well-lit room, possibly a classroom or office space. At 12 o'clock right in front of you, a hand is holding up a smartphone displaying its lock screen with the time 04:30 and date Sat, 24 Oct. Standing close to you at 1 o'clock, about 3 feet away, is a young man with curly hair wearing a light green shirt over a grey t-shirt. Further away to your right at 2 to 3 o'clock, other people are seated at desks, and one person is partially visible in the bottom right corner.",
+      "detected_text": "Sat, 24 Oct 04:30 VI India (Vodafone IN) Face Unlock available",
+      "detected_objects": [
+        {
+          "name": "smartphone",
+          "position": "held in hand directly in front of you",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "standing in front-right",
+          "distance": "3 feet",
+          "clockPosition": "1 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "seated to your right",
+          "distance": "5 feet",
+          "clockPosition": "3 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Handheld phone close to your face",
+          "severity": "low",
+          "advice": "Be mindful of the smartphone being held very close to your field of view."
+        }
+      ],
+      "navigation_advice": "The floor immediately in front of you is clear, but a person is standing very close at 1 o'clock. Step carefully if you wish to move forward.",
+      "audio_transcript": "Scene overview: There are 5 people near you. Objects around you include smartphone at 1 o'clock. Layout: clear floor directly ahead with people nearby. You are holding or looking at a smartphone displaying the time 4:30 on Saturday, October 24th, and a person is standing just 3 feet away to your right at 1 o'clock. Visible text: \"Sat, 24 Oct 04:30 VI India (Vodafone IN) Face Unlock available\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3862,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T11:00:46.401Z",
+      "updated_at": "2026-10-24T11:00:46.401Z"
+    },
+    {
+      "id": "54ebf153-3214-4c40-b46a-36cad8483197",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792839593155_63ls0k.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are holding a promotional flyer for Hacktoberfest at 12 o'clock, 1 foot away. There are people depicted in the background image on the flyer.",
+      "detailed_description": "You are holding a white and blue flyer close to your view at 12 o'clock, approximately 1 foot away. A finger is visible holding the top edge. The flyer features text about Hacktoberfest, DigitalOcean AI tools, and libraries, along with an image of a crowd of people raising their hands in the background.",
+      "detected_text": "Build open-source for Hacktoberfest Open-Source AI Prize Challenge Consider using DigitalOcean as part of your tech stack: 1 Try DigitalOcean's AI tools mlh.link/digitalocean-starterkit-h26 2 Browse DigitalOcean libraries mlh.link/digitalocean-libraries-h26 3 Deploy Hermes in one click mlh.link/digitalocean-hermes-h26 Enter the prize",
+      "detected_objects": [
+        {
+          "name": "flyer",
+          "position": "directly in front held in hand",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "partially visible in the upper left corner",
+          "distance": "2 feet",
+          "clockPosition": "10 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "No immediate physical hazards detected. You are holding a flyer with text and images.",
+      "audio_transcript": "Scene overview: There are 1 person near you. Objects around you include flyer at 12 o'clock. Layout: open path. You are holding a flyer for Hacktoberfest. Here is the text on the flyer: Build open-source for Hacktoberfest. Open-Source AI Prize Challenge. Consider using DigitalOcean as part of your tech stack: 1, Try DigitalOcean's AI tools, mlh.link/digitalocean-starterkit-h26. 2, Browse DigitalOcean libraries, mlh.link/digitalocean-libraries-h26. 3, Deploy Hermes in one click, mlh.link/digitalocean-hermes-h26.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7775,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:59:53.161Z",
+      "updated_at": "2026-10-24T10:59:53.161Z"
+    },
+    {
+      "id": "955f7e90-1ec9-40dc-8213-c313aa8d68a0",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838826940_zhji2m.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "There are 2 people near you indoors against a tiled wall background, with one person holding a smartphone at 10 o'clock and another person at 2 o'clock.",
+      "detailed_description": "The scene shows two young adult men indoors near a decorated tiled wall. One person is positioned on the left at 10 o'clock, approximately 2 feet away, holding a smartphone with its camera facing forward. The second person is positioned on the right at 2 o'clock, approximately 3 feet away, wearing glasses and a dark shirt. The floor and immediate surroundings appear clear with no major physical obstacles directly in your path.",
+      "detected_text": "",
+      "detected_objects": [
+        {
+          "name": "smartphone",
+          "position": "held by the person on the left",
+          "distance": "2 feet",
+          "clockPosition": "10 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The pathway ahead appears clear for movement. You can step forward safely.",
+      "audio_transcript": "Scene overview: There are 2 people near you. Objects around you include a smartphone at 10 o'clock. Layout: open path. Two people are nearby against a tiled wall, with one person holding a smartphone on your left and another person wearing glasses on your right.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3693,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:47:06.944Z",
+      "updated_at": "2026-10-24T10:47:06.944Z"
+    },
+    {
+      "id": "56648f87-f2df-4be1-9895-c67c7bcde371",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838594031_0h0epq.jpeg",
+      "mode": "currency",
+      "custom_prompt": null,
+      "summary": "Total currency detected: 5 Rupees. A single 5 Rupee coin is being held up at 10 o'clock.",
+      "detailed_description": "A person is holding up a 5 Rupee coin between 9 and 10 o'clock approximately 1 foot away. Two people are visible in the scene: one person holding the coin at 10 o'clock and another person looking down at a desk or table at 2 o'clock.",
+      "detected_text": "5",
+      "detected_objects": [
+        {
+          "name": "5 Rupee coin",
+          "position": "held in hand to your forward left",
+          "distance": "1 foot",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your forward left",
+          "distance": "1.5 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "to your forward right",
+          "distance": "2 feet",
+          "clockPosition": "2 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "No immediate hazards detected. The space directly in front of you is clear.",
+      "audio_transcript": "Total currency detected: 5 INR. Breakdown: One 5 Rupee coin. Total currency detected: 5 Rupees. A single 5 Rupee coin is being held up at 10 o'clock.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3200,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:43:14.033Z",
+      "updated_at": "2026-10-24T10:43:14.033Z"
+    },
+    {
+      "id": "167fafb5-fd12-4deb-a6e4-f677a165db37",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838558125_q65mc0.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "The camera feed is completely dark, showing no visible objects, people, or lighting.",
+      "detailed_description": "The image appears to be entirely black, suggesting the camera lens may be covered, in total darkness, or experiencing a hardware malfunction. No spatial details, objects, or people can be identified.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "Complete visual obstruction or total darkness",
+          "severity": "high",
+          "advice": "Please check if the camera lens is covered or if you are in an unlit area before moving."
+        }
+      ],
+      "navigation_advice": "Exercise extreme caution as surroundings are not visible. Remain stationary until visibility is restored.",
+      "audio_transcript": "Scene overview: There are 0 people near you. Objects around you include none. Layout: Obstructed or dark. The camera view is completely dark. Please ensure your camera lens is uncovered.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 2617,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:42:38.126Z",
+      "updated_at": "2026-10-24T10:42:38.126Z"
+    },
+    {
+      "id": "e7a2d468-cddf-4ff4-93d8-c90aeb9c1e3b",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838557703_j2afzf.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "The camera image is completely black or obscured, showing no visible scene, objects, or people.",
+      "detailed_description": "The image appears to be entirely black, suggesting the camera lens is covered, facing a completely dark space, or malfunctioning. No spatial layout, objects, or people can be detected.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "Camera view is completely dark or obstructed.",
+          "severity": "high",
+          "advice": "Check if the camera lens is covered or if you are in a completely unlit area before moving."
+        }
+      ],
+      "navigation_advice": "Exercise caution. The camera feed is completely dark, making it impossible to assess the walkway. Stop and verify your surroundings before taking another step.",
+      "audio_transcript": "Scene overview: There are 0 people near you. Objects around you include none at this time. Layout: Completely obscured. The camera feed is entirely black. Please check if your camera lens is covered or if you are in a dark area.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 2016,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:42:37.705Z",
+      "updated_at": "2026-10-24T10:42:37.705Z"
+    },
+    {
+      "id": "dc7788c6-3789-48d8-81a5-6f28902e1e0b",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838556548_yfq77u.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "The camera image is completely black or obscured, showing no visible scene, objects, or people.",
+      "detailed_description": "The image feed appears to be completely dark, possibly due to a covered camera lens, a technical error, or total darkness in the environment. No spatial depth, lighting, people, or objects can be discerned.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "Camera view is completely dark or obstructed.",
+          "severity": "high",
+          "advice": "Please check your camera lens or ensure you are in a lit area. Walk cautiously as surroundings cannot be seen."
+        }
+      ],
+      "navigation_advice": "Exercise extreme caution. The camera is not providing visual data, so please hold your white cane or guide in front of you and do not move forward until visibility is restored.",
+      "audio_transcript": "Scene overview: There are 0 people near you. Objects around you include none visible. Layout: obstructed or completely dark. The camera view is completely dark. Please check if the camera lens is covered.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 1911,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:42:36.551Z",
+      "updated_at": "2026-10-24T10:42:36.551Z"
+    },
+    {
+      "id": "6e9cd7db-b937-4f0e-8e3c-3f4287641031",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838516285_dr1f7d.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "There are 2 people in front of you indoors, with a clear walkway ahead.",
+      "detailed_description": "You are indoors in what appears to be an office or educational setting with a white wall background. There are two young men in front of you. One person with dark curly hair and a light green shirt is positioned close to your front left at about 10 o'clock, 2 feet away. The second person with short dark hair, glasses, and a multi-colored jacket is standing at your front right at about 2 o'clock, 3 feet away. Behind them on the wall is an electrical unit with green indicator lights and a power socket below it.",
+      "detected_text": "VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "forward left",
+          "distance": "2 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "forward right",
+          "distance": "3 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "electrical panel",
+          "position": "directly behind the people",
+          "distance": "4 feet",
+          "clockPosition": "12 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The floor directly in front of you is clear for safe movement, but note that people are close by at 10 o'clock and 2 o'clock.",
+      "audio_transcript": "Scene overview: There are 2 people near you. Objects around you include an electrical panel on the wall straight ahead at 12 o'clock. Layout: Open path directly ahead. Two people are positioned close to you: one at 10 o'clock 2 feet away and another at 2 o'clock 3 feet away. Visible text: \"VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 3369,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:41:56.287Z",
+      "updated_at": "2026-10-24T10:41:56.287Z"
+    },
+    {
+      "id": "e70f30b9-6088-4e47-beb6-fd42d50c29fe",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838199171_s6zljn.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "You are surrounded by three people in an indoor setting, with a smartphone held close in front of you at 12 o'clock.",
+      "detailed_description": "The scene is indoors with a light-colored wall in the background. There are three people close to you: one person wearing a black cap is partially visible on your left at 9 o'clock, about 2 feet away; a central person with curly hair is looking forward at 12 o'clock holding a gold smartphone; and a third person wearing glasses and a maroon t-shirt with a jacket is standing on your right at 2 o'clock, about 3 feet away. A wall outlet with a black charger plugged in is visible in the background at 2 o'clock.",
+      "detected_text": "realme",
+      "detected_objects": [
+        {
+          "name": "smartphone",
+          "position": "held in front of you",
+          "distance": "1 foot",
+          "clockPosition": "12 o'clock"
+        },
+        {
+          "name": "charger and electrical outlet",
+          "position": "plugged into wall on the right",
+          "distance": "4 feet",
+          "clockPosition": "2 o'clock"
+        }
+      ],
+      "hazards": [
+        {
+          "type": "Electrical outlet with connected charger cable",
+          "severity": "low",
+          "advice": "Be mindful of the cable if you are reaching towards the right side."
+        }
+      ],
+      "navigation_advice": "The space directly in front of you is occupied by people and a held phone. Step back or pivot slightly left or right if you wish to clear your immediate path.",
+      "audio_transcript": "Scene overview: There are 3 people near you. Objects around you include a smartphone at 12 o'clock and an electrical charger at 2 o'clock. Layout: Indoor setting with people close by. You are surrounded by three people: one to your left wearing a cap, one directly in front holding a phone, and one to your right wearing glasses. Visible text: \"realme\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 4134,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:36:39.176Z",
+      "updated_at": "2026-10-24T10:36:39.176Z"
+    },
+    {
+      "id": "b9cecdd4-03e8-4635-9731-cd1f292b241f",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838154425_d4o5qb.jpeg",
+      "mode": "hazards",
+      "custom_prompt": null,
+      "summary": "The camera image is completely black or obscured, showing no visible environment or objects.",
+      "detailed_description": "The image is entirely dark with no discernable features, lighting, objects, or text. It is possible the camera lens is covered, blocked, or in total darkness.",
+      "detected_text": "",
+      "detected_objects": [],
+      "hazards": [
+        {
+          "type": "Camera view is completely blocked or in total darkness, preventing environmental awareness.",
+          "severity": "high",
+          "advice": "Check if the camera lens is covered or if you are in a completely dark space."
+        }
+      ],
+      "navigation_advice": "Exercise extreme caution as the camera cannot see your surroundings. Stop and check your device camera before proceeding.",
+      "audio_transcript": "Safety Alert: Camera view is completely blocked or in total darkness located directly ahead. Immediate action: Check if the camera lens is covered or if you are in a completely dark space.",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 5914,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:35:54.426Z",
+      "updated_at": "2026-10-24T10:35:54.426Z"
+    },
+    {
+      "id": "ee34739c-94d0-43e5-abd1-dea4695521fb",
+      "user_id": null,
+      "image_url": "/uploads/capture_1792838029350_427zz6.jpeg",
+      "mode": "general",
+      "custom_prompt": null,
+      "summary": "There are 2 people near you. A person with dark curly hair is seated at 10 o'clock, 3 feet away, and another person is standing to your right at 2 o'clock, 2 feet away holding a small dark object.",
+      "detailed_description": "The scene features two people in an indoor setting with a white wall background. At 10 o'clock, approximately 3 feet away, a person with dark curly hair wearing a light green shirt over a grey t-shirt and a lanyard is looking toward the camera. At 2 o'clock, approximately 2 feet away, another person wearing a green, white, and dark blue jacket is holding a small, round, dark grey object close to the camera. In the background, there is an electrical outlet and what appears to be a mounted electronic device.",
+      "detected_text": "A'S VIDYAPEETH",
+      "detected_objects": [
+        {
+          "name": "person",
+          "position": "forward left",
+          "distance": "3 feet",
+          "clockPosition": "10 o'clock"
+        },
+        {
+          "name": "person",
+          "position": "forward right",
+          "distance": "2 feet",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "earbud case",
+          "position": "forward right, held in hand",
+          "distance": "1 foot",
+          "clockPosition": "2 o'clock"
+        },
+        {
+          "name": "lanyard",
+          "position": "around neck of person on left",
+          "distance": "3 feet",
+          "clockPosition": "10 o'clock"
+        }
+      ],
+      "hazards": [],
+      "navigation_advice": "The immediate area in front of you appears clear, but two people are close by at 10 o'clock and 2 o'clock. Proceed with caution if moving.",
+      "audio_transcript": "Scene overview: There are 2 people near you. Objects around you include a small round case held at 2 o'clock and a lanyard at 10 o'clock. Layout: Indoor setting with people nearby. There are 2 people near you: a person seated at 10 o'clock, 3 feet away, and another person standing at 2 o'clock, 2 feet away holding a small dark object. Visible text: \"A'S VIDYAPEETH\".",
+      "ai_provider": "gemini",
+      "ai_model": "gemini-3.8-flash",
+      "latency_ms": 7563,
+      "is_favorite": false,
+      "metadata": {},
+      "created_at": "2026-10-24T10:33:49.354Z",
+      "updated_at": "2026-10-24T10:33:49.354Z"
+    },
+    {
       "id": "cfa426f8-ff1f-488d-96c5-a2eb11f0f76f",
       "user_id": null,
       "image_url": "/uploads/capture_1792834264606_bokryz.jpeg",

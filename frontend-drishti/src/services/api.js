@@ -1,7 +1,19 @@
 import axios from 'axios';
 
+const getBaseURL = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`;
+  }
+  // Automatically connect to deployed Render backend in production
+  if (import.meta.env.PROD) {
+    return 'https://drishti-3slc.onrender.com/api';
+  }
+  // Use Vite proxy in local development
+  return '/api';
+};
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: getBaseURL(),
   timeout: 90000,
   headers: {
     'Content-Type': 'application/json'

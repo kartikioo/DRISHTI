@@ -59,6 +59,8 @@ if extra_paths:
 processes = []
 public_tunnel_url = ""
 tunnel_lock = threading.Lock()
+stop_event = threading.Event()
+tunnel_thread = None
 
 
 def get_local_ip() -> str:
@@ -97,58 +99,73 @@ def copy_to_clipboard(text: str) -> bool:
 
 
 def start_public_tunnel():
-    """Start SSH reverse tunnel via localhost.run to expose the app to the entire internet."""
-    global public_tunnel_url
+    """Start SSH reverse tunnel via localhost.run with automatic keepalive and reconnection."""
+    global public_tunnel_url, tunnel_thread
+
+    if tunnel_thread and tunnel_thread.is_alive():
+        with tunnel_lock:
+            curr = public_tunnel_url
+        if curr:
+            copy_to_clipboard(curr)
+            print(f"\n 🌍 {GREEN}{BOLD}Public Share Link:{RESET} {YELLOW}{BOLD}{curr}{RESET}")
+            print(f" 📋 {GREEN}✓ Copied to clipboard! Share this link with anyone.{RESET}\n")
+        return
 
     print(f" {YELLOW}⏳ Generating Public Shareable Internet Link...{RESET}")
-    cmd = [
-        "ssh",
-        "-R", "80:localhost:5173",
-        "-o", "StrictHostKeyChecking=no",
-        "-o", "ServerAliveInterval=30",
-        "-o", "ServerAliveCountMax=3",
-        "-o", "ExitOnForwardFailure=yes",
-        "nokey@localhost.run"
-    ]
 
-    try:
-        proc = subprocess.Popen(
-            cmd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            bufsize=1,
-            shell=IS_WIN
-        )
-        processes.append(proc)
+    def _tunnel_worker():
+        global public_tunnel_url
+        cmd = [
+            "ssh",
+            "-R", "80:localhost:5173",
+            "-o", "StrictHostKeyChecking=no",
+            "-o", "ServerAliveInterval=15",
+            "-o", "ServerAliveCountMax=3",
+            "-o", "ExitOnForwardFailure=yes",
+            "nokey@localhost.run"
+        ]
+        url_pattern = re.compile(r"https://[a-zA-Z0-9.-]+\.lhr\.life")
 
-        def _reader():
-            global public_tunnel_url
-            url_pattern = re.compile(r"https://[a-zA-Z0-9.-]+\.lhr\.life")
-            for line in iter(proc.stdout.readline, ""):
-                if not line:
-                    break
-                match = url_pattern.search(line)
-                if match:
-                    with tunnel_lock:
-                        public_tunnel_url = match.group(0)
-                    copy_to_clipboard(public_tunnel_url)
-                    sep = "-" * 66
-                    print(f"\n{GREEN}{BOLD}{sep}{RESET}")
-                    print(f" {GREEN}{BOLD}🌍 PUBLIC INTERNET ACCESS READY! (ACCESSIBLE TO ANYONE){RESET}")
-                    print(f" 🔗 {YELLOW}{BOLD}{public_tunnel_url}{RESET}")
-                    print(f" 📋 {GREEN}✓ Copied public link to your clipboard! Share this link with anyone.{RESET}")
-                    print(f"{GREEN}{BOLD}{sep}{RESET}\n")
-                    break
+        while not stop_event.is_set():
+            try:
+                proc = subprocess.Popen(
+                    cmd,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    bufsize=1,
+                    shell=IS_WIN
+                )
+                processes.append(proc)
 
-        t = threading.Thread(target=_reader, daemon=True)
-        t.start()
-        # Allow up to 4.5 seconds for tunnel handshake
-        t.join(timeout=4.5)
-        return proc
-    except Exception as e:
-        print(f" {RED}Tunnel start error: {e}{RESET}")
-        return None
+                for line in iter(proc.stdout.readline, ""):
+                    if stop_event.is_set():
+                        break
+                    match = url_pattern.search(line)
+                    if match:
+                        found_url = match.group(0)
+                        with tunnel_lock:
+                            changed = (found_url != public_tunnel_url)
+                            public_tunnel_url = found_url
+                        if changed:
+                            copy_to_clipboard(public_tunnel_url)
+                            sep = "-" * 66
+                            print(f"\n{GREEN}{BOLD}{sep}{RESET}")
+                            print(f" {GREEN}{BOLD}🌍 PUBLIC INTERNET ACCESS READY! (ACCESSIBLE TO ANYONE){RESET}")
+                            print(f" 🔗 {YELLOW}{BOLD}{public_tunnel_url}{RESET}")
+                            print(f" 📋 {GREEN}✓ Copied public link to your clipboard! Share this link with anyone.{RESET}")
+                            print(f"{GREEN}{BOLD}{sep}{RESET}\n")
+
+                proc.wait()
+            except Exception:
+                pass
+
+            if not stop_event.is_set():
+                time.sleep(2)
+
+    tunnel_thread = threading.Thread(target=_tunnel_worker, daemon=True)
+    tunnel_thread.start()
+    tunnel_thread.join(timeout=4.0)
 
 
 def print_banner(local_ip: str):
@@ -281,6 +298,7 @@ def setup_github_connection():
 
 def cleanup(signum=None, frame=None):
     """Gracefully terminate background processes on exit."""
+    stop_event.set()
     print(f"\n{YELLOW}Stopping Drishti host processes...{RESET}")
     for proc in processes:
         if proc.poll() is None:
